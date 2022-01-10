@@ -1,78 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<menu>
-    <section name="Drinks">
-        <entry>
-            <item>Coke</item>
-            <price>2.50</price>
-        </entry>
-        <entry>
-            <item>Vodka</item>
-            <price>15</price>
-        </entry>
-        <entry vegetarian="true">
-            <item>Kombucha</item>
-            <price>2.0</price>
-        </entry>        
-    </section>
-    <section name="Side Dishes">
-        <entry>
-            <item>Potato Salad</item>
-            <price>4.95</price>
-        </entry>
-        <entry>
-            <item>Chips</item>
-            <price>4.50</price>
-        </entry>
-        <entry vegetarian="true">
-            <item>Rice</item>
-            <price>4.0</price>
-        </entry>        
-    </section>
-    <section name="Breakfast">
-        <entry>
-            <item>Eggs Benedict</item>
-            <price>12.99</price>
-        </entry>
-        <entry>
-            <item>Poached Eggs</item>
-            <price>8</price>
-        </entry>
-        <entry vegetarian="true">
-            <item>FrenchToast</item>
-            <price>2.0</price>
-        </entry>        
-    </section>
-    <section name="Lunch">
-        <entry>
-            <item>Grilled Chicken Sadnwich</item>
-            <price>7.50</price>
-        </entry>
-        <entry>
-            <item>Soup of the Day</item>
-            <price>6</price>
-        </entry>
-        <entry vegetarian="true">
-            <item>Falafel</item>
-            <price>10</price>
-        </entry>        
-    </section>
-    <section name="Dinner">
-        <entry>
-            <item>Ribeye Steak</item>
-            <price>19.99</price>
-        </entry>
-        <entry>
-            <item>Sushi</item>
-            <price>15</price>
-        </entry>
-        <entry vegetarian="true">
-            <item>Shahshuka</item>
-            <price>15</price>
-        </entry>        
-    </section>
-</menu> 
- 140  PaddysCafe.xsl 
-@@ -0,0 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
 	<xsl:output method="html" doctype-public="XSLT-compat" omit-xml-declaration="yes" encoding="UTF-8" indent="yes"/>
@@ -177,10 +102,10 @@
 						</tr>
 					</thead>
 					<tbody>
-						<xsl:for-each select="Answer">
+						<xsl:for-each select="//select">
 							<tr>
 								<td colspan="3">
-									<xsl:value-of select="Answer"/>
+									<xsl:value-of select="@name"/>
 								</td>
 							</tr>
 							<xsl:for-each select="Answer">
