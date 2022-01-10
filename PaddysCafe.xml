@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu>
+    <section name="Drinks">
+        <entry>
+            <item>Coke</item>
+            <price>2.50</price>
+        </entry>
+        <entry>
+            <item>Vodka</item>
+            <price>15</price>
+        </entry>
+        <entry vegetatian="true">
+            <item>Kombucha</item>
+            <price>2.00</price>
+        </entry>
+        <entry>
+            <item></item>
+            <price></price>
+        </entry>
+    </section>
+    <section name="Side Dishes">
+        <entry>
+            <item>Potato Salad</item>
+            <price>4.95</price>
+        </entry>
+        <entry>
+            <item>Chips</item>
+            <price>4.50</price>
+        </entry>
+        <entry vegetatian="true">
+            <item>Rice</item>
+            <price>4.00</price>
+        </entry>
+        <entry>
+            <item></item>
+            <price></price>
+        </entry>
+    </section>
+    <section name="Breakfast">
+        <entry>
+            <item>Eggs Benedict</item>
+            <price>12.99</price>
+        </entry>
+        <entry>
+            <item>Poached Eggs</item>
+            <price>8</price>
+        </entry>
+        <entry vegetatian="true">
+            <item>French Toast</item>
+            <price>2.00</price>
+        </entry>
+        <entry>
+            <item></item>
+            <price></price>
+        </entry>
+    </section>
+    <section name="Lunch">
+        <entry>
+            <item>Grilled Chicken Sandwich</item>
+            <price>7.50</price>
+        </entry>
+        <entry>
+            <item>Soup of the Day</item>
+            <price>6</price>
+        </entry>
+        <entry vegetatian="true">
+            <item>Falafel</item>
+            <price>10</price>
+        </entry>
+        <entry>
+            <item></item>
+            <price></price>
+        </entry>
+    </section>
+    <section name="Dinner">
+        <entry>
+            <item>RibEye Steak</item>
+            <price>19.99</price>
+        </entry>
+        <entry>
+            <item>Sushi</item>
+            <price>15</price>
+        </entry>
+        <entry vegetatian="true">
+            <item>Shahshuka</item>
+            <price>15</price>
+        </entry>
+        <entry>
+            <item></item>
+            <price></price>
+        </entry>
+    </section>
+</menu>
