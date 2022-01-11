@@ -5,8 +5,36 @@ const   express = require('express'), //Allows to respond to HTTP requests, defi
         xml2js = require('xml2js'), //This is XML <-> JSON converter
         xmlParse = require('xslt-processor').xmlParse, //Parsing XML
         xsltProcess = require('xslt-processor').xsltProcess; //Processing XSLT
+const { process_params } = require('express/lib/router');
 
 const   router = express(), //Instantiating Express
         server = http.createServer(router); //Instantiating the server
 
 router.use(express.static(path.resolve(__dirname,'views'))); //Serving static content from "views" folder
+
+router.get('/get/html', function(req, res) {
+
+    res.writeHead(200, {'Content-Type' : 'text/html'}); //Tell the user that the resource exists and which type that is
+
+    let xml = fs.readFileSync('PaddysCafe.xml', 'utf8'), //read in the XML file
+        xsl = fs.readFileSync('PaddysCafe.xsl', 'utf8'); //read in the XSL file
+
+    console.log(xml);
+    console.log(xsl);
+
+    let doc = xmlParse(xml), //Parse the XML file
+        stylesheet = xmlParse(xsl); //Parse the XSL file
+
+    let result = xsltProcess(doc, stylesheet); //Performing XSLT
+
+    console.log(result);
+
+    res.end(result.toString()); //Serve back the user
+
+});
+
+
+server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
+    const addr = server.address();
+    console.log('Server listening at', addr.address + ':' + addr.port)
+});
